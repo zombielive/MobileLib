@@ -1,0 +1,45 @@
+/* pages/person/info.wxss */
+page {
+  background-color: #eeeeee;
+}
+.book-list {
+  width: 100%;
+  background-color: #ffffff;
+}
+.book-item {
+  position: relative;
+  width: 100%;
+  border-bottom: 1rpx solid #dddddd;
+  padding: 20rpx 40rpx;
+}
+.author {
+  font-size: 30rpx;
+  margin: 15rpx 0;
+}
+.number {
+  color: #aaaaaa;
+}
+.rest {
+  position: absolute;right: 40rpx;bottom: 20rpx;
+}
+.rest span {
+  color: #aaaaaa;
+  font-size: 60rpx;
+  margin: 0 10rpx;
+}
+.s-btn {
+  background-color: #66ccff;
+  color: #ffffff;
+}
+.s-btn-hover{
+  background-color:#3399ff;
+}
+.notice{
+  position: absolute;
+  right: 24rpx;
+  top: 16rpx;
+  background-color: red;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+}

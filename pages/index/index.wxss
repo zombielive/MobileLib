@@ -1,0 +1,54 @@
+/**index.wxss**/
+page {
+  background-color: #eeeeee;
+}
+.search {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1rpx solid #dddddd;
+  display: flex;
+}
+.search-input{
+  padding: 20rpx 40rpx;
+  flex-grow: 1;
+}
+.search-btn {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.s-btn {
+  background-color: #66ccff;
+  color: #ffffff;
+}
+.s-btn-hover{
+  background-color:#3399ff;
+}
+.book-list {
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+.book-item {
+  position: relative;
+  width: 100%;
+  border-bottom: 1rpx solid #dddddd;
+  padding: 20rpx 40rpx;
+}
+.author {
+  font-size: 30rpx;
+  margin: 15rpx 0;
+}
+.number {
+  color: #aaaaaa;
+}
+.rest {
+  position: absolute;right: 40rpx;bottom: 20rpx;
+  color: #000;
+  font-size: 30rpx;
+}
+.rest span {
+  color: #aaaaaa;
+  font-size: 60rpx;
+  margin: 0 10rpx;
+}

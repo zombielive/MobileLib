@@ -1,0 +1,61 @@
+/* pages/person/index.wxss */
+.container{
+  padding: 0;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.threeBox{
+  margin-top: 25rpx;
+  display: flex;
+}
+.box{
+  flex-grow: 1;
+  text-align: center;
+  border: 1rpx solid #ffffff;
+  background-color: #66ccff;
+  color: #ffffff;
+}
+.box-hover{
+  background-color:#3399ff;
+}
+.word{
+  padding: 20rpx 0 10rpx 0;
+}
+.number{
+  padding: 10rpx 0 20rpx 0;
+  font-size: 64rpx;
+}
+.barBox{
+  padding-top: 20rpx;
+}
+.bar{
+  padding: 36rpx 36rpx;
+  border-bottom: 5rpx solid #66ccff;
+  color: #66ccff;
+  position: relative;
+}
+.bar-hover{
+  background-color: #66ccff;
+  color: #ffffff;
+}
+.notice{
+  position: absolute;
+  right: 24rpx;
+  top: 16rpx;
+  background-color: red;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+}

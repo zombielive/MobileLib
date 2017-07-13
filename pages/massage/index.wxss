@@ -1,0 +1,31 @@
+/* pages/massage/index.wxss */
+.commentCard {
+  background-color: #ffffff;
+  padding: 5rpx 40rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 5rpx solid #66ccff;
+}
+.cardHead {
+  padding: 10rpx 10rpx;
+  display: flex;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.photo {
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+}
+.name {
+  font-size: 45rpx;
+  padding: 5rpx 10rpx;
+}
+.score {
+  font-size: 30rpx;
+  color: #666666;
+  padding: 5rpx 10rpx;
+}
+.content {
+  padding: 10rpx 20rpx;
+  font-size: 35rpx;
+  line-height: 45rpx;
+}

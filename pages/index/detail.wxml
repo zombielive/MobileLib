@@ -1,0 +1,55 @@
+<!--pages/index/detail.wxml-->
+<view class="container">
+  <view class="headBox">
+    <view class="name">{{book.name}}</view>
+    <view class="type">{{book.author}}/{{book.type}}</view>
+    <view class="type">{{book.number}}</view>
+    <view class="point">{{book.collection}} 收藏/{{book.comment}} 评论/{{book.score}} 评分</view>
+  </view>
+  <view class="bodyBox">
+    <view class="rest">剩余 {{book.rest}} 本</view>
+    <view class="group">
+      <view class="gp" hover-class="gp-hover" bindtap="clcollect" wx:if="{{book.isCollect != 0}}">取消收藏</view>
+      <view class="gp" hover-class="gp-hover" bindtap="collect" wx:else>收藏</view>
+      <view class="gp" hover-class="gp-hover" wx:if="{{book.isBorrow != 0}}">已借阅</view>
+      <view class="gp" hover-class="gp-hover" bindtap="borrow" wx:elif="{{book.rest > 0}}">借阅</view>
+      <view class="gp" hover-class="gp-hover" bindtap="appoint" wx:elif="{{book.isAppoint == 0}}">预约</view>
+      <view class="gp" hover-class="gp-hover" wx:else>已预约</view>
+      <view class="gp" hover-class="gp-hover" bindtap="comment" wx:if="{{!book.myComment}}">评论</view>
+      <view class="gp" hover-class="gp-hover" wx:else>已评论</view>
+    </view>
+    <view class="introduction"><text>{{book.introduction}}</text></view>
+  </view>
+  <view class="bottomBox">
+    <view class="commentBar">评论区</view>
+    <view class="commentCard" wx:if="{{book.myComment}}">
+      <view class="cardHead">
+        <image src="{{userInfo.avatarUrl}}" class="photo"></image>
+        <view class="cardTitle">
+          <view class="name">{{userInfo.nickName}}（我）</view>
+          <view class="score">评分：{{book.myComment.score}}</view>
+        </view>
+      </view>
+      <view class="content">{{book.myComment.content}}</view>     
+    </view>
+    <view class="commentCard" wx:for="{{com}}">
+      <view class="cardHead">
+        <image src="/image/photo.png" class="photo"></image>
+        <view class="cardTitle">
+          <view class="name">{{item.wxname}}</view>
+          <view class="score">评分：{{item.score}}</view>
+        </view>
+      </view>
+      <view class="content">{{item.content}}</view>     
+    </view>
+    <button loading="{{loading}}" disabled="{{disabled}}" bindtap="loadmore">{{loadmoreTxt}}</button>
+  </view>
+</view>
+<view class="screen" wx:if="{{isSeen}}" bindtap="clComment"></view>
+<view class="commentBox" wx:if="{{isSeen}}">
+  <form bindsubmit="commentSubmit">
+    <textarea placeholder="输入你的评价" name="content" class="textArea"/>
+    评分：<slider name="score" max="100" min="0" show-value activeColor="#66ccff" />
+    <button class="s-btn" hover-class="s-btn-hover" form-type="submit">评论</button>
+  </form>
+</view>

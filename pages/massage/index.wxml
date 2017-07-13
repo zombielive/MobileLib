@@ -1,0 +1,16 @@
+<!--pages/massage/index.wxml-->
+<view class="container">
+  <view class="commentCard" wx:for="{{funs}}" bindtap="detail" data-bid="{{item.id}}">
+    <view class="cardHead">
+      <image src="/image/photo.png" class="photo"></image>
+      <view class="cardTitle">
+        <view class="name">{{item.uname}}</view>
+        <view class="score">来自-{{item.bname}}</view>
+        <view class="score">评分：{{item.score}}</view>
+        <view class="score">{{item.time}}</view>
+      </view>
+    </view>
+    <view class="content">{{item.content}}</view>     
+  </view>
+  <button loading="{{loading}}" disabled="{{disabled}}" bindtap="loadmore">{{loadmoreTxt}}</button>
+</view>

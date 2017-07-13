@@ -1,0 +1,44 @@
+<!--pages/person/info.wxml-->
+<view class="container">
+  <view class="book-list" wx:for="{{books}}" wx:if="{{option == 1}}">
+    <view class="book-item">
+      <view class="title">{{item.bname}}</view>
+      <view class="author">借书时间：{{item.btime}}</view>
+      <view class="author">还书时间：{{item.rtime}}</view>
+      <view class="rest">
+        <button class="s-btn" size="mini" hover-class="s-btn-hover" bindtap="renew" data-bid="{{item.bid}}">续借</button>
+      </view>
+    </view>
+  </view>
+  <view class="book-list" wx:for="{{books}}" wx:if="{{option == 2}}">
+    <view class="book-item">
+      <view class="title">{{item.bname}}</view>
+      <view class="author" wx:for="{{item.man}}" wx:for-item="man">{{man.uname}}/应还时间：{{man.rtime}}
+        <button class="s-btn" size="mini" hover-class="s-btn-hover" bindtap="call" data-bid="{{man.bid}}">留言</button>
+      </view>
+    </view>
+  </view>
+  <view class="book-list" wx:for="{{books}}" wx:if="{{option == 3}}">
+      <view class="book-item" bindtap="detail" data-bid="{{item.id}}">
+        <view class="title">{{item.name}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="number">{{item.number}}</view>
+        <view class="rest">可借<span>{{item.rest}}</span>本</view>
+      </view>
+  </view>
+  <view class="book-list" wx:for="{{books}}" wx:if="{{option == 4}}">
+    <view class="book-item" bindtap="detail" data-bid="{{item.bid}}">
+      <view class="title">{{item.bname}}</view>
+      <view class="author">借书时间：{{item.btime}}</view>
+      <view class="author">还书时间：{{item.rtime}}</view>
+    </view>
+  </view>
+  <view class="book-list" wx:for="{{books}}" wx:if="{{option == 5}}">
+      <view class="book-item" bindtap="read" data-mid="{{item.id}}">
+        <view class="title">来自：{{item.sname}}</view>
+        <view class="author">{{item.content}}</view>
+        <view class="number">{{item.stime}}</view>
+        <view class="notice" wx:if="{{itme.isread == 0}}"></view>
+      </view>
+  </view>
+</view>

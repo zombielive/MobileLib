@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="threeBox">
+    <view class="box" hover-class="box-hover" bindtap="op1">
+      <view class="word">已借</view>
+      <view class="number">{{bNum}}</view>
+    </view>
+    <view class="box" hover-class="box-hover" bindtap="op2">
+      <view class="word">预约</view>
+      <view class="number">{{aNum}}</view>
+    </view>
+    <view class="box" hover-class="box-hover" bindtap="op3">
+      <view class="word">收藏</view>
+      <view class="number">{{cNum}}</view>
+    </view>
+  </view>
+  <view class="barBox">
+    <view class="bar" hover-class="bar-hover" bindtap="op4">借阅历史</view>
+    <view class="bar" hover-class="bar-hover" bindtap="op5">消息 <view class="notice" wx:if="{{haveMs}}"></view> </view>
+  </view>
+</view>
